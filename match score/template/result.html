@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Statistics Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff4e50, #fc913a); /* Background gradient from red to orange */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+            transition: transform 0.3s; /* Transition for hover effect */
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* Lifts the box up on hover */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+        }
+
+        .result {
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Shadow for result box */
+            transition: box-shadow 0.3s; /* Transition for shadow effect */
+        }
+
+        .result:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More shadow on hover */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: linear-gradient(to right, #007bff, #6610f2); /* Gradient for button */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline */
+            transition: background 0.3s; /* Transition for button */
+        }
+
+        a:hover {
+            background: linear-gradient(to right, #6610f2, #007bff); /* Reverse gradient on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Run Statistics for Match ID: {{ mid }}</h2>
+        <div class="result">
+            <p>Total Runs: {{ total_runs }}</p>
+        </div>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
